@@ -1,0 +1,51 @@
+{% load static %} {%load mathfilters%} {%load humanize%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DietCraft: Recipe Finder</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <img src="{% static 'images/logo.png' %}" class="img-responsive logo mb-5 mt-5" />
+                <form method="POST">
+                    {%csrf_token%}
+                    <div class="input-group input-group-lg mb-5">
+                    <input type="text" name="query" class="form-control inputstyle" placeholder="Search for a recipe..." required>
+                    <button class="btn whoop" type="submit" id="button-addon2">Find recipe</button>
+                    </div>
+                </form>
+                {% if api %}
+                  {% if api == "oops! There was an error" %}
+                  <div class ="alert alert-warning"> Oh no! something went wrong.Please try again in sometime. </div>
+                  {%else%}
+                  <div class="row">
+                    <div class="col-md-10 caloriescont shadow rounded">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2 class="mt-3 mb-4">Recipes</h2>
+                                <ul>
+                                    {% for recipe in api %}
+                                    <li>
+                                        <h5>{{ recipe.title }}</h5>
+                                        <p><strong>Ingredients:</strong> {{ recipe.ingredients }}</p>
+                                        <p><strong>Servings:</strong> {{ recipe.servings }}</p>
+                                        <p><strong>Instructions:</strong> {{ recipe.instructions }}</p>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    {%endif%}
+                    {%endif%}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

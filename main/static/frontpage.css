@@ -1,0 +1,88 @@
+/* Color Palette */
+:root {
+    --primary-color: #22577a;   /* Dark Blue */
+    --secondary-color: #38a3a5; /* Teal */
+    --accent-color-1: #57cc99;  /* Green */
+    --accent-color-2: #80ed99;  /* Light Green */
+    --accent-color-3: #c7f9cc;  /* Pale Green */
+}
+
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+}
+
+.logo img {
+    height: 50px; /* Adjust height as needed */
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--accent-color-3);
+}
+
+.auth-buttons button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.auth-buttons button:hover {
+    background-color: var(--accent-color-1);
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 0;
+    background-color: var(--accent-color-2);
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: var(--primary-color);
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.image-gallery img {
+    width: 30%;
+    border-radius: 10px;
+}

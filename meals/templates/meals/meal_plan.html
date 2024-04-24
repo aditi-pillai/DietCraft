@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spoonacular Meal Planner</title>
+</head>
+<body>
+    <h1>Spoonacular Meal Planner</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="time_frame">Time Frame:</label>
+        <select id="time_frame" name="time_frame" required>
+            <option value="day">Day</option>
+            <option value="week">Week</option>
+        </select>
+        <br>
+        <label for="target_calories">Target Calories:</label>
+        <input type="number" id="target_calories" name="target_calories" required>
+        <br>
+        <label for="diet">Diet:</label>
+        <input type="text" id="diet" name="diet" required>
+        <br>
+        <label for="exclude">Any Dietary Restrictions: (comma-separated list of allergens or ingredients that must be excluded.)</label>
+        <input type="text" id="exclude" name="exclude">
+        <br>
+        <button type="submit">Generate Meal Plan</button>
+    </form>
+
+    {% if data %}
+    <h2>Nutrients</h2>
+    <p>Calories: {{ data.nutrients.calories }}</p>
+    <p>Carbohydrates: {{ data.nutrients.carbohydrates }}</p>
+    <p>Fat: {{ data.nutrients.fat }}</p>
+    <p>Protein: {{ data.nutrients.protein }}</p>
+
+    <h2>Meals</h2>
+    <ul>
+        {% for meal in data.meals %}
+        <li>
+            <h3>{{ meal.title }}</h3>
+            <img src="https://spoonacular.com/recipeImages/{{ meal.id }}-556x370.{{ meal.imageType }}" alt="{{ meal.title }}">
+            <p>Ready in {{ meal.readyInMinutes }} minutes</p>
+            <p>Servings: {{ meal.servings }}</p>
+            <a href="{{ meal.sourceUrl }}" target="_blank">View Recipe</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if error_message %}
+    <p>{{ error_message }}</p>
+    {% endif %}
+</body>
+</html>

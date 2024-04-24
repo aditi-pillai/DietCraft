@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>DietCraft - Register</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'signup_new.css' %}">
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <div class="text">
+        <h1>"DietCraft: Crafting Healthy Eating Habits!"</h1>
+
+        <p>
+            Dive into a transformative journey with DietCraft,
+             your trusted companion in crafting nutritious meals. 
+             Intuitive tools and delicious recipes make achieving 
+             wellness goals enjoyable!!
+        </p>
+      </div>
+
+      <div class="form-section">
+        <p class="free-trial">
+          <span>Try it for 7 Days and be A BETTER you</span> 
+        </p>
+
+        <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="inputfield">
+                        <input type="text" id="name" name="name" placeholder="First Name" />
+                        <span></span>
+                      </div>
+            
+                      <div class="inputfield">
+                        <input type="text" id="lname" name="lname" placeholder="Last Name" />
+                        <span></span>
+                      </div>
+            
+                      <div class="inputfield">
+                        <input type="email" id="email" name="email" placeholder="Email Address" />
+                        <span></span>
+                      </div>
+            
+                      <div class="inputfield">
+                        <input type="password" id="pass1" name="pass1" placeholder="Password" />
+                        <span></span>
+                      </div>
+
+                      <div class="inputfield">
+                        <input type="password" id="pass2" name="pass2" placeholder="Confirm Password" />
+                        <span></span>
+                      </div>
+            
+                    {% comment %} <label for="">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Username" required>
+                    <br>
+
+                    <label for="">First Name</label>
+                    <input type="text" id="fname" name="fname" placeholder="First Name" required>
+                    <br>
+
+                    <label for="">Last Name</label>
+                    <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+                    <br>
+
+                    <label for="">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <br>
+
+                    <label for="">Password</label>
+                    <input type="password" id="pass1" name="pass1" placeholder="Password" required>
+                    <br>
+
+                    <label for="">Confirm Password</label>
+                    <input type="password" id="pass2" name="pass2" placeholder="Confirm Password" required>
+                    <br> {% endcomment %}
+
+                    <label for="accept-terms">
+                        <input type="checkbox" id="accept-terms" required> I accept the terms and conditions
+                    </label>
+                    <button type="submit">Sign Up</button>
+                </form>
+      </div>
+    </main>
+
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a>DietCraft</a
+        >. Coded by <a href="/dashboard">AditiParnikaShloka</a>.
+      </p>
+    </footer>
+  </body>
+</html>
