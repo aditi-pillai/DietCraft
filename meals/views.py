@@ -67,11 +67,16 @@ def generate_meal_plan(request):
 
         if response.status_code == 200:
             data = response.json()
-            return render(request, 'meals/meal_plan.html', {'data': data})
+            print(data)
+            if time_frame == 'day':
+                return render(request, 'meals/meal_plan_day.html', {'data': data})
+            else: 
+                return render(request, 'meals/meal_plan_week.html', {'data': data})
+            
         else:
             error_message = f"Failed to generate meal plan: {response.text}"
-            return render(request, 'meals/meal_plan.html', {'error_message': error_message})
+            return render(request, 'meals/meal_plan_day.html', {'error_message': error_message})
     
-    return render(request, 'meals/meal_plan.html')
+    return render(request, 'meals/meal_plan_day.html')
 
     

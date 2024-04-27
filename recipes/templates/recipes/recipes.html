@@ -1,4 +1,4 @@
-{% load static %} {%load mathfilters%} {%load humanize%}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,44 +6,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DietCraft: Recipe Finder</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Google Fonts - Open Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .logo {
+            max-width: 200px;
+        }
+        .inputstyle {
+            border-radius: 25px;
+        }
+        .whoop {
+            border-radius: 25px;
+            background-color: #007bff;
+            border-color: #007bff;
+            color: #fff;
+            font-weight: bold;
+        }
+        .caloriescont {
+            background-color: #fff;
+            color: #333;
+        }
+        .recipe-card {
+            border: none;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+        }
+        .recipe-card:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8 text-center">
-                <img src="{% static 'images/logo.png' %}" class="img-responsive logo mb-5 mt-5" />
+                <img src="{% static 'images/logo.png' %}" class="img-fluid logo mb-5 mt-5" />
                 <form method="POST">
-                    {%csrf_token%}
+                    {% csrf_token %}
                     <div class="input-group input-group-lg mb-5">
-                    <input type="text" name="query" class="form-control inputstyle" placeholder="Search for a recipe..." required>
-                    <button class="btn whoop" type="submit" id="button-addon2">Find recipe</button>
+                        <input type="text" name="query" class="form-control inputstyle" placeholder="Search for a recipe..." required>
+                        <div class="input-group-append">
+                            <button class="btn whoop" type="submit" id="button-addon2">Find recipe</button>
+                        </div>
                     </div>
                 </form>
                 {% if api %}
-                  {% if api == "oops! There was an error" %}
-                  <div class ="alert alert-warning"> Oh no! something went wrong.Please try again in sometime. </div>
-                  {%else%}
-                  <div class="row">
-                    <div class="col-md-10 caloriescont shadow rounded">
+                    {% if api == "oops! There was an error" %}
+                        <div class ="alert alert-warning"> Oh no! something went wrong. Please try again in sometime. </div>
+                    {% else %}
                         <div class="row">
                             <div class="col-md-12">
                                 <h2 class="mt-3 mb-4">Recipes</h2>
-                                <ul>
-                                    {% for recipe in api %}
-                                    <li>
+                                {% for recipe in api %}
+                                    <div class="recipe-card">
                                         <h5>{{ recipe.title }}</h5>
                                         <p><strong>Ingredients:</strong> {{ recipe.ingredients }}</p>
                                         <p><strong>Servings:</strong> {{ recipe.servings }}</p>
                                         <p><strong>Instructions:</strong> {{ recipe.instructions }}</p>
-                                    </li>
-                                    {% endfor %}
-                                </ul>
+                                    </div>
+                                {% endfor %}
                             </div>
                         </div>
-                    </div>
-                </div>
-                    {%endif%}
-                    {%endif%}
+                    {% endif %}
+                {% endif %}
             </div>
         </div>
     </div>

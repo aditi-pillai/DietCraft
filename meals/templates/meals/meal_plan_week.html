@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meal Plan</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+        }
+        .recipe-card {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+        }
+        .recipe-card:hover {
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+        }
+        .recipe-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+        .recipe-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        .recipe-info {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .recipe-nutrients {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .search-container {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .search-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .search-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4 mb-4 text-center">Meal Plan</h1>
+        <div class="search-container">
+            <form action="/search" method="GET">
+                <input type="text" name="query" class="search-input" placeholder="Search for recipes...">
+                <button type="submit" class="search-btn">Search</button>
+            </form>
+        </div>
+        {% if data %}
+            {% for day, meals in data.week.items %}
+                <h3 class="mb-3">{{ day|capfirst }}</h3>
+                <div class="row">
+                    {% for meal in meals.meals %}
+                        <div class="col-lg-4 mb-4">
+                            <div class="recipe-card">
+                                <img src="https://spoonacular.com/recipeImages/{{ meal.id }}-556x370.{{ meal.imageType }}" class="recipe-image" alt="{{ meal.title }}">
+                                <h4 class="recipe-title">{{ meal.title }}</h4>
+                                <p class="recipe-info">Ready in: {{ meal.readyInMinutes }} minutes | Servings: {{ meal.servings }}</p>
+                                <p><a href="{{ meal.sourceUrl }}" target="_blank" class="btn btn-primary">View Recipe</a></p>
+                                <ul class="recipe-nutrients list-unstyled">
+                                    <li>Calories: {{ meals.nutrients.calories }}</li>
+                                    <li>Protein: {{ meals.nutrients.protein }}</li>
+                                    <li>Fat: {{ meals.nutrients.fat }}</li>
+                                    <li>Carbohydrates: {{ meals.nutrients.carbohydrates }}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</body>
+</html>

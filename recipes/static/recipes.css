@@ -1,0 +1,51 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 50px; /* Adjust top padding for better visibility */
+}
+
+.logo {
+    max-width: 200px;
+}
+
+.inputstyle {
+    border-radius: 25px;
+}
+
+.whoop {
+    border-radius: 25px;
+    background-color: #007bff; /* Light blue button */
+    border-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+}
+
+.caloriescont {
+    background-color: #fff;
+    color: #333;
+}
+
+.recipe-card {
+    border: 2px solid #ddd; /* Distinguishable border */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.2); /* Stronger glow effect */
+    transition: box-shadow 0.3s;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for cards */
+}
+
+.recipe-card:hover {
+    box-shadow: 0 0 30px rgba(0, 123, 255, 0.4); /* Stronger glow effect on hover */
+    transform: translateY(-5px); /* Lift the card slightly on hover */
+}
+
+.recipe-card h5 {
+    margin-bottom: 10px;
+}
+
+.recipe-card p {
+    margin-bottom: 5px;
+}
