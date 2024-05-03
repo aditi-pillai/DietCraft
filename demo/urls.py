@@ -30,5 +30,6 @@ urlpatterns = [
     path('activate/<str:uidb64>/<str:token>/', v.activate, name='activate'),
     path('calories/',v1.calorie_counter,name="calories"),
     path('recipes/',v2.recipes,name="recipes"),
+    path('something/',v1.something, name="something"),
     path('generate-meal-plan/', v3.generate_meal_plan, name="generate-meal-plan"),
 ]

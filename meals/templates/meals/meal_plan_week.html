@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,10 +7,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #f8f9fa;
-            font-family: 'Poppins', sans-serif;
-            color: #333;
-        }
+            font-family: "Open Sans", sans-serif;
+            padding-top: 50px; /* Add padding to top for navbar */
+            background-image: url("{% static 'image.jpg' %}");
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* No repeating of the background image */
+            color: #000;
+          }
         .recipe-card {
             margin-bottom: 20px;
             padding: 20px;
