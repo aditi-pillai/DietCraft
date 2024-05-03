@@ -8,27 +8,46 @@
   <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 </head>
 <body>
-  <nav id="navbar">
+    <header>
+        <a href="/home" class="logo">
+            <img src="{% static 'logo1.png' %}" alt="DietCraft Logo">
+        </a>
+        
+        <div class="nav-bar">
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/dashboard">About</a></li>
+                <li><a href="/generate-meal-plan">Generate your Meal Plan</a></li>
+                <li><a href="/calories">Calorie Count</a></li>
+                <li><a href="/recipes">Recipe Search</a></li>
+                <li><a href="/signin">Login</a></li>
+                <li><a href="/signup">Sign Up</a></li>
+            </ul>
+        </div>
+    </header>        
+  {% comment %} <nav id="navbar">
     <label class="logo"><a href="/home">DIETCRAFT</a></label>
     <ul>
+      <li><a class="nav-link" href="/home" >Home</a></li>
       <li><a class="nav-link" href="/recipes" >Recipes</a></li>
       <li><a class="nav-link" href="/generate-meal-plan">Meals</a></li>
-      <li><a class="nav-link" href="/dashboard">Dashboard</a></li>
+      {% comment %} <li><a class="nav-link" href="/dashboard">Dashboard</a></li> {% endcomment %}
       {% comment %} <li><a class="nav-link" href="#">Shop</a></li> {% endcomment %}
-      <li><a class="nav-link" href="/signup">Sign Up</a></li>
-      <li><a class="nav-link" href="/login">Log In</a></li>
+      {% comment %} <li><a class="nav-link" href="/signup">Sign Up</a></li>
+      <li><a class="nav-link" href="/signin">Log In</a></li>
     </ul>
-  </nav>
+  </nav> {% endcomment %} 
   
   <main>
-    <section id="header">
+    <section id="header" style="background-image: url('../../../static/front.png');">
     <h1>Healthy Life starts with<br> what you eat.</h1>
     <p id="text">Take control of your goals. Track calories and your Meals. Breakdown ingredients</p>
     
     <div id="button">
-      <button id="button-one"><a href="#">Start a plan</a></button>
+        <button id="button-one"><a href="/generate-meal-plan">Start a plan</a></button>
     </div>
-    </section>
+</section>
+
     
     <section id="features-one">
       <a id="features-one-link" href="#">
@@ -60,7 +79,7 @@
       </a>
     </section>
     
-    <section id="calorie-counter">
+    <section id="calorie-counter" style="background-image: url('../../../static/caloriepic.png');">
         <div class="calorie-counter">
           <label>Calorie Counter</label>
           <p>What's in your food? Learn about calorie count, 
@@ -91,7 +110,7 @@
       
       
       <div id="button">
-        <button><a href="#">More Plans</a></button>
+        <button><a href="/generate-meal-plan">More Plans</a></button>
       </div>
     </section>
     
@@ -100,7 +119,7 @@
           <h2>The Tools for Your <span>Healthy Goals</span>
   </h2>
           <p>Trying to lose or Gain weight, tone up, get to a good BMI, or invest in your overall health?  We give you the right features to hit your goals.</p>
-          <button><a href="#">Get Started</a></button>
+          <button><a href="/generate-meal-plan">Get Started</a></button>
         </div>
   
         <div class="features-three-box">

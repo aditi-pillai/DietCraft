@@ -28,9 +28,22 @@
                 <li><a href="/generate-meal-plan">Generate your Meal Plan</a></li>
                 <li><a href="/calories">Calorie Count</a></li>
                 <li><a href="/recipes">Recipe Search</a></li>
+                <li><a href="/signin">Login</a></li>
+                <li><a href="/signup">Sign Up</a></li>
             </ul>
         </div>
     </header>
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            <strong>Message:</strong> {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    {% endfor %}
+    {% if fname %}
+    <p>Welcome back to DietCraft, {{fname}}</p>
+    {% endif %}
     <div class="hero">
         <div class="content">
             <h4>Eat healthy, live happy. Starts with planning</h4>

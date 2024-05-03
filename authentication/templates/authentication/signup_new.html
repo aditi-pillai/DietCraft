@@ -28,6 +28,14 @@
       }
     </style>
   </head>
+  {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                <strong>Message:</strong> {{ message }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        {% endfor %}
   <body>
     <main class="container">
       <div class="text">
@@ -46,10 +54,15 @@
           <span>Try it for 7 Days and be A BETTER you</span> 
         </p>
 
-        <form action="" method="post">
+        <form action="" method="POST">
                     {% csrf_token %}
                     <div class="inputfield">
-                        <input type="text" id="name" name="name" placeholder="First Name" />
+                      <input type="text" id="username" name="username" placeholder="Username" />
+                      <span></span>
+                    </div>
+
+                    <div class="inputfield">
+                        <input type="text" id="fname" name="fname" placeholder="First Name" />
                         <span></span>
                       </div>
             
@@ -58,7 +71,7 @@
                         <span></span>
                       </div>
             
-                      <div class="inputfield">
+                      <div class="inputfield">  
                         <input type="email" id="email" name="email" placeholder="Email Address" />
                         <span></span>
                       </div>
