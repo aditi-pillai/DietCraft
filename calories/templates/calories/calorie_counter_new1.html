@@ -84,9 +84,13 @@
           <label>Calorie Counter</label>
           <p>What's in your food? Learn about calorie count, 
     nutrition information and serving size.
-          <div id="search-input">
-            <input id="search-food" type="text" placeholder="Search foods">
-          </div>
+          <form method="POST">
+            {% csrf_token %}
+            <div id="search-input">
+            <input name="query" id="search-food" type="text" placeholder="Search foods">
+            <button class="btn whoop" type="submit" id="button-addon2">Find calories</button>
+            </div>
+          </form>
         </div>
       </section>
     

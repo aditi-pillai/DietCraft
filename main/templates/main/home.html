@@ -12,24 +12,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>DietCraft</title>
+    <title> DIETCRAFT</title>
 </head>
 
 <body>
     <header>
-        <a href="/home" class="logo">
-            <img src="{% static 'logo1.png' %}" alt="DietCraft Logo">
-        </a>
-        
+        <div class="logo">DIETCRAFT</div>
         <div class="nav-bar">
             <ul>
                 <li><a href="/home">Home</a></li>
                 <li><a href="/dashboard">About</a></li>
-                <li><a href="/generate-meal-plan">Generate your Meal Plan</a></li>
+                <li><a href="/generate-meal-plan">Generate your Food Plan</a></li>
                 <li><a href="/calories">Calorie Count</a></li>
-                <li><a href="/recipes">Recipe Search</a></li>
-                <li><a href="/signin">Login</a></li>
-                <li><a href="/signup">Sign Up</a></li>
+                {% comment %} <li><a href="#">Contact</a></li> {% endcomment %}
             </ul>
         </div>
     </header>
@@ -49,14 +44,14 @@
             <h4>Eat healthy, live happy. Starts with planning</h4>
             <h1>Discover a world of flavors, planned just for you.</h1>
             <h3>Healthy eating made simple.</h3>
-            <a href="/generate-meal-plan" class="button">Generate Your Personalized Meal Plan</a>
+            <div class="button">Generate Your Personalized Meal Plan</div>
         </div>
     </div>
     <!----About Section Start---------------------------------->
     <section class="about">
         <h2>About Us</h2>
         <div class="main">
-            <img src="20 Indian Thali Ideas.jfif" alt="">
+            <img src="{% static '20 Indian Thali Ideas.jfif' %}" alt="">
             <div class="about-text">
                 <p>Welcome to DIETCRAFT,it's your personalized Meal Planner architect! 
                     Ditch the one-size-fits-all plans. Tell us your goals, preferences,
@@ -70,133 +65,73 @@
     </section>
     <!-----Recipes Section Start---------------------------------->
     <div class="recipe">
-        <h2>Categories</h2>
+        <h2>Heathly Food.Healthy Life.</h2>
         <div class="box">
             <div class="card">
                 <img src="{% static 'r1.jfif' %}" alt="">
                 <div class="content">
-                    <h3>Recipe 1</h3>
-                    <P>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</P>
-                    <button>View Recipe</button>
+                    <h3>Vegetarian Thali</h3>
+                    <P>A vegetarian thali is a balanced and colorful platter loaded with protein, fiber, vitamins, and minerals from lentils, vegetables, whole grains, and adequet amount of Carbs.</P>
+                    <button>View Calorie Count</button>
                 </div>
             </div>
             <div class="card">
-                <img src="{% static 'r2.jfif' %}" alt="">
+                <img src="{% static 'r2.jpg' %}" alt="">
                 <div class="content">
-                    <h3>Recipe 2</h3>
-                    <P>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</P>
-                    <button>View Recipe</button>
+                    <h3>Buddha Bowl</h3>
+                    <P>Buddha bowls are delicious, customizable, and packed with whole grains, protein, veggies, and healthy fats for a complete and nutritious meal.</P>
+                    <button>View Calorie Count</button>
                 </div>
             </div>
             <div class="card">
-                <img src="{% static 'r3.jfif' %}" alt="">
+                <img src="{% static 'r3.jpg' %}" alt="">
                 <div class="content">
-                    <h3>Recipe 3</h3>
-                    <P>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</P>
-                    <button>View Recipe</button>
+                    <h3>One Pot Meal</h3>
+                    <P>One-pot meals are time-saving, clean-up friendly, and can be packed with nutrients from vegetables, whole grains, and lean protein.</P>
+                    <button>View Calorie Count</button>
                 </div>
             </div>
             <div class="card">
                 <img src="{% static 'r4.jfif' %}" alt="">
                 <div class="content">
-                    <h3>Recipe 4</h3>
-                    <P>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</P>
-                    <button>View Recipe</button>
+                    <h3>South Indian breakfasts</h3>
+                    <P>South Indian breakfasts are a delicious and healthy way to start your day, packed with fiber, protein, and beneficial probiotics from fermentation.</P>
+                    <button>View Calorie Count</button>
                 </div>
             </div>
-            <div class="card">
-                <img src="{% static 'r5.jfif' %}" alt="">
-                <div class="content">
-                    <h3>Recipe 5</h3>
-                    <P>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</P>
-                    <button>View Recipe</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="{% static 'r6.png' %}" alt="">
-                <div class="content">
-                    <h3>Recipe 6</h3>
-                    <P>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</P>
-                    <button>View Recipe</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="{% static 'r7.jfif' %}" alt="">
-                <div class="content">
-                    <h3>Recipe 7</h3>
-                    <P>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</P>
-                    <button>View Recipe</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="{% static 'r8.jfif' %}" alt="">
-                <div class="content">
-                    <h3>Recipe 8</h3>
-                    <P>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</P>
-                    <button>View Recipe</button>
-                </div>
-            </div>
-        </div>
     </div>
     <!--------------categories section-------------------------------->
     <div class="categories">
         <h2>categories</h2>
         <div class="box">
             <div class="ca-card">
-                <img src="{% static 'maincourse.jfif' %}" alt="">
+                <img src="{% static '101.jpg' %}" alt="">
                 <div class="content">
-                    <h3>Main Courses</h3>
-                    <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</p>
-                    <button>Read More</button>
+                    <h3>Meal Planner</h3>
+                    <p>Meal planning made easy.</p>
+                    <a href="/generate-meal-plan"><button>Explore</button></a>
                 </div>
             </div>
             <div class="ca-card">
-                <img src="{% static 'desserts.jfif' %}" alt="">
+                <img src="{% static '102.jpg' %}" alt="">
                 <div class="content">
-                    <h3>Desserts</h3>
-                    <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</p>
-                    <button>Read More</button>
+                    <h3>Calorie Counter</h3>
+                    <p>Know your fuel, fuel your goals.</p>
+                    <a href="/calories"><button>Explore</button></a>
                 </div>
             </div>
             <div class="ca-card">
-                <img src="{% static 'healthyeats.jfif' %}" alt="">
+                <img src="{% static '103.jpeg' %}" alt="">
                 <div class="content">
-                    <h3>Healthy Eats</h3>
-                    <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</p>
-                    <button>Read More</button>
+                    <h3>Recipes</h3>
+                    <p>Your Guide to Culinary Creations: Find Your Perfect Recipe.</p>
+                    <a href="/recipes"><button>Explore</button></a>
                 </div>
             </div>
-            <div class="ca-card">
-                <img src="{% static 'baking.jfif' %}" alt="">
-                <div class="content">
-                    <h3>Baking</h3>
-                    <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</p>
-                    <button>Read More</button>
-                </div>
-            </div>
+            
         </div>
     </div>
-    <!------------contact section-------------------------->
-    <section class="contact">
-        <div class="contact-info">
-            <h2>Contact Information</h2>
-            <p><strong>Address:</strong> 123 Main Street, city,city,country</p>
-            <p><strong>Phone:</strong>1234567890</p>
-            <p><strong>Email:</strong>info@example.com</p>
-        </div>
-        <div class="contact-form">
-            <h2>Contact Form</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" name="name" id="name" required>
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" required>
-                <label for="message">Message:</label>
-                <textarea name="message" id="message"  required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </section>
+   
 <footer>
     <div class="social-icons">
         <a href="#" class="social-icon"> <i class="fab fa-facebook"></i> </a>

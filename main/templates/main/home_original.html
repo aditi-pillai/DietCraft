@@ -1,35 +1,36 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DietCraft - Meal Planner</title>
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'frontpage.css' %}">
-
+    <link rel="stylesheet" type="text/css" href="{% static 'frontpage_new.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,200;1,300;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>DietCraft</title>
 </head>
+
 <body>
     <header>
-        <a href="/home">
-            <div class="logo">
-                <img src="https://as1.ftcdn.net/v2/jpg/06/32/80/98/1000_F_632809844_cgxOgg9gtZXUsJDPAwbosyXqX1MasRk5.jpg" alt="DietCraft Logo">
-            </div>
+        <a href="/home" class="logo">
+            <img src="{% static 'logo1.png' %}" alt="DietCraft Logo">
         </a>
-        <nav>
+        
+        <div class="nav-bar">
             <ul>
                 <li><a href="/home">Home</a></li>
-                <li><a href="/dashboard">Dashboard</a></li>
-                <li><a href="#">My Plans</a></li>
-                <li><a href="/generate-meal-plan">Preference Form</a></li>
-                <li><a href="/calories">Calorie Counter</a></li>
-                <li><a href="/recipes">Recipe Finder</a></li>
-                <!--navigation -->
+                <li><a href="/dashboard">About</a></li>
+                <li><a href="/generate-meal-plan">Generate your Meal Plan</a></li>
+                <li><a href="/calories">Calorie Count</a></li>
+                <li><a href="/recipes">Recipe Search</a></li>
+                <li><a href="/signin">Login</a></li>
+                <li><a href="/signup">Sign Up</a></li>
             </ul>
-        </nav>
-        <div class="auth-buttons">
-            <button><a href="/signin">Login</a></button>
-            <button><a href="/signup">Sign Up</a></button>
         </div>
     </header>
     {% for message in messages %}
@@ -40,22 +41,170 @@
             </button>
         </div>
     {% endfor %}
-    <main>
-        <section class="hero">
-            <h1>Welcome to DietCraft</h1>
-            <p>Your personalized meal planner for a healthier you!</p>
-          
-        </section>
+    {% if fname %}
+    <p>Welcome back to DietCraft, {{fname}}</p>
+    {% endif %}
+    <div class="hero">
+        <div class="content">
+            <h4>Eat healthy, live happy. Starts with planning</h4>
+            <h1>Discover a world of flavors, planned just for you.</h1>
+            <h3>Healthy eating made simple.</h3>
+            <a href="/generate-meal-plan" class="button">Generate Your Personalized Meal Plan</a>
+        </div>
+    </div>
+    <!----About Section Start---------------------------------->
+    <section class="about">
+        <h2>About Us</h2>
+        <div class="main">
+            <img src="20 Indian Thali Ideas.jfif" alt="">
+            <div class="about-text">
+                <p>Welcome to DIETCRAFT,it's your personalized Meal Planner architect! 
+                    Ditch the one-size-fits-all plans. Tell us your goals, preferences,
+                     and dietary needs, and DietCraft will craft a delicious meal plan 
+                     that fits your unique lifestyle. Get ready to explore new flavors, 
+                     stay on track, and achieve your health goals, all while enjoying 
+                     every bite. Let DietCraft be your guide to a happier, healthier you!</p>
 
-        <section class="image-gallery">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2o2a3vMviux1_DbFMwNSphke94OjPkgpF-A&usqp=CAU" alt="Balanced Diet">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdESwucwo_ALucj-iT_-8mDdXjZQG7Oh8vYw&usqp=CAU" alt="Healthy Food">
-            <img src="https://www.mdanderson.org/content/mda/en/cancerwise/2023/10/healthy-foods-to-eat-during-cancer-treatment/jcr:content/blog/adaptiveimage.resize.1296.0.high.jpg/1696015121644.jpg" alt="Fruits and Vegetables">
-       
-        </section>
-    </main>
-
-  
-
+            </div>
+        </div>
+    </section>
+    <!-----Recipes Section Start---------------------------------->
+    <div class="recipe">
+        <h2>Categories</h2>
+        <div class="box">
+            <div class="card">
+                <img src="{% static 'r1.jfif' %}" alt="">
+                <div class="content">
+                    <h3>Recipe 1</h3>
+                    <P>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</P>
+                    <button>View Recipe</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{% static 'r2.jfif' %}" alt="">
+                <div class="content">
+                    <h3>Recipe 2</h3>
+                    <P>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</P>
+                    <button>View Recipe</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{% static 'r3.jfif' %}" alt="">
+                <div class="content">
+                    <h3>Recipe 3</h3>
+                    <P>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</P>
+                    <button>View Recipe</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{% static 'r4.jfif' %}" alt="">
+                <div class="content">
+                    <h3>Recipe 4</h3>
+                    <P>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</P>
+                    <button>View Recipe</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{% static 'r5.jfif' %}" alt="">
+                <div class="content">
+                    <h3>Recipe 5</h3>
+                    <P>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</P>
+                    <button>View Recipe</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{% static 'r6.png' %}" alt="">
+                <div class="content">
+                    <h3>Recipe 6</h3>
+                    <P>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</P>
+                    <button>View Recipe</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{% static 'r7.jfif' %}" alt="">
+                <div class="content">
+                    <h3>Recipe 7</h3>
+                    <P>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</P>
+                    <button>View Recipe</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{% static 'r8.jfif' %}" alt="">
+                <div class="content">
+                    <h3>Recipe 8</h3>
+                    <P>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</P>
+                    <button>View Recipe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------categories section-------------------------------->
+    <div class="categories">
+        <h2>categories</h2>
+        <div class="box">
+            <div class="ca-card">
+                <img src="{% static 'maincourse.jfif' %}" alt="">
+                <div class="content">
+                    <h3>Main Courses</h3>
+                    <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</p>
+                    <button>Read More</button>
+                </div>
+            </div>
+            <div class="ca-card">
+                <img src="{% static 'desserts.jfif' %}" alt="">
+                <div class="content">
+                    <h3>Desserts</h3>
+                    <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</p>
+                    <button>Read More</button>
+                </div>
+            </div>
+            <div class="ca-card">
+                <img src="{% static 'healthyeats.jfif' %}" alt="">
+                <div class="content">
+                    <h3>Healthy Eats</h3>
+                    <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</p>
+                    <button>Read More</button>
+                </div>
+            </div>
+            <div class="ca-card">
+                <img src="{% static 'baking.jfif' %}" alt="">
+                <div class="content">
+                    <h3>Baking</h3>
+                    <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</p>
+                    <button>Read More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------contact section-------------------------->
+    <section class="contact">
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p><strong>Address:</strong> 123 Main Street, city,city,country</p>
+            <p><strong>Phone:</strong>1234567890</p>
+            <p><strong>Email:</strong>info@example.com</p>
+        </div>
+        <div class="contact-form">
+            <h2>Contact Form</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+                <label for="message">Message:</label>
+                <textarea name="message" id="message"  required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+<footer>
+    <div class="social-icons">
+        <a href="#" class="social-icon"> <i class="fab fa-facebook"></i> </a>
+        <a href="#" class="social-icon"> <i class="fab fa-twitter"></i> </a>
+        <a href="#" class="social-icon"> <i class="fab fa-instagram"></i> </a>
+    </div>
+    <h5>CopyRight © 2024 By DietCraftAPS </h5>
+</footer>
 </body>
+
 </html>

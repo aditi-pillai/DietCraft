@@ -17,4 +17,4 @@ def recipes(request):
             print(e)
         return render(request, 'recipes/recipes.html', {'api': api})
     else:
-        return render(request, 'recipes/recipes.html', {'query': 'Enter a valid query'})
+        return render(request, 'recipes/recipes_new.html', {'query': 'Enter a valid query'})

@@ -1,179 +1,154 @@
 {% load static %}
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-{% load static %} {%load mathfilters%} {%load humanize%}
-    <html>
-        <head>
-            <META http-equiv="Content-Type" content="text/html; charset=utf-8">
-            <title>DietCraft - Calorie Finder</title>
-            <style></style>
-            <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-            <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.css' %}">
-            <link rel="stylesheet" type="text/css" href="{% static 'animate.css' %}">
-        </head>
-        <body>
-            <u></u>
-    <div>
-    <div class="m_container-fluid m_pl-0 m_pr-0 m_bg-img m_clearfix m_parallax-window2">
-      <u></u>
-        <div class="m_container"> 
-           
-           <a class="m_navbar-brand m_mr-auto" href="https://www.google.com/url?q=http://index.html&amp;source=gmail-html&amp;ust=1713874718990000&amp;usg=AOvVaw29Bg2SMxr2wWwF_rp3IOhX" target="_blank" rel="noreferrer"></a>
-            
-          
-          
-          <button class="m_navbar-toggler" type="button"> <span class="m_navbar-toggler-icon"></span> </button>
-          
-          
-          <div class="m_collapse m_navbar-collapse" id="m_collapsibleNavbar">
-            <ul class="m_navbar-nav m_ml-auto">
-               <li class="m_nav-item"> <a class="m_nav-link" href="https://www.google.com/url?q=http://index.html&amp;source=gmail-html&amp;ust=1713874718990000&amp;usg=AOvVaw29Bg2SMxr2wWwF_rp3IOhX" target="_blank" rel="noreferrer">Home</a> </li>
-              <li class="m_nav-item"> <a class="m_nav-link" href="#m__about-us" rel="noreferrer">Dashboard</a> </li>
-              <li class="m_nav-item"> <a class="m_nav-link" href="#m__contact" rel="noreferrer">My Plans</a> </li> 
-               <li class="m_nav-item"> <a class="m_nav-link" href="https://www.google.com/url?q=http://workout.html&amp;source=gmail-html&amp;ust=1713874718990000&amp;usg=AOvVaw1S1aDgJg7D_mLdFDFfENdz" target="_blank" rel="noreferrer">Calorie Counter</a> </li>       
-              <li class="m_nav-item"> <a class="m_nav-link" href="https://www.google.com/url?q=http://food.html&amp;source=gmail-html&amp;ust=1713874718990000&amp;usg=AOvVaw3AA_8s_mv3CS_x-KH0wnh_" target="_blank" rel="noreferrer">Receipe Finder</a> </li>
-               
-            </ul>
-            
-          </div>
-        </div>
-      <u></u>
-      <div class="m_container" style="margin-top:70px">
-        <div class="m_fh5co-banner-text-box">
-          <div class="m_quote-box m_pl-5 m_pr-5 m_wow m_bounceInRight">
-           <h2> CALORIE COUNT<br><span></span> </h2>
-          </div>
-        </div>
-        
-          </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DietCraft</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'styles_result.css' %}">
+</head>
+<body>
+  <nav id="navbar">
+    <label class="logo"><a href="/home">DIETCRAFT</a></label>
+    <ul>
+      <li><a class="nav-link" href="/home" >Home</a></li>
+      <li><a class="nav-link" href="/recipes" >Recipes</a></li>
+      <li><a class="nav-link" href="/generate-meal-plan">Meals</a></li>
+      <li><a class="nav-link" href="/dashboard">Dashboard</a></li>
+      {% comment %} <li><a class="nav-link" href="#">Shop</a></li> {% endcomment %}
+      <li><a class="nav-link" href="/signup">Sign Up</a></li>
+      <li><a class="nav-link" href="/signin">Log In</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <section id="header" style="background-image: url('../../../static/front.png');">
+    <h1>Healthy Life starts with<br> what you eat.</h1>
+    <p id="text">Take control of your goals. Track calories and your Meals. Breakdown ingredients</p>
+    
+    <div id="button">
+      <button id="button-one"><a href="/generate-meal-plan">Start a plan</a></button>
     </div>
-    <div class="m_container-fluid m_fh5co-network">
-      <div class="m_container">
-        <div class="m_row">
-          <div class="m_col-md-6">   
-            <h4 class="m_wow m_bounceInUp">Bicycling</h4>
-            <h2 class="m_wow m_bounceInRight"></h2>
-            <hr>
-            <h5 class="m_wow m_bounceInLeft">Cycling works the same muscles as running</h5>
-            <p class="m_wow m_bounceInDown">But with lower impact. If you’re going at an intense rate, you can burn anywhere from 600 to over a thousand calories a session, especially with use of intervals. Aim to keep your maximum heart rate about halfway between the low and high ends of your target heart rate zone.</p>
-          </div>
-          <div class="m_col-md-6">
-            <figure class="m_wow m_bounceInDown">
+    </section>
     
+    <section id="features-one">
+      <a id="features-one-link" href="#">
+      <div class="features-one-box">
+        <h3>Wellness</h3>
+        <p>Trying to stay healthy and fit?  We give you the right features to hit your healthy Goals.</p>
+      </div>
+      </a>
+      
+      <a id="features-one-link" href="/calories">
+      <div class="features-one-box">
+        <h3>Challenges</h3>
+        <p>Take control of your health goals. Track calories, breakdown ingredients, and log activities</p>
+      </div>
+      </a>
+      
+      <a id="features-one-link" href="/recipes">
+      <div class="features-one-box">
+        <h3>Healthy & Tasty</h3>
+        <p>Get nutritionist-approved recipes and proper meal plans from experts.</p>
+      </div>
+      </a>
+      
+      <a id="features-one-link" href="/generate-meal-plan">
+      <div class="features-one-box">
+        <h3>Personaliztions</h3>
+        <p>Your meal plan gets personalized to your taste, dietary needs, and goals.We craft a plan that fits your unique you.</p>
+      </div>
+      </a>
+    </section>
     
-             <img src="https://ci3.googleusercontent.com/meips/ADKq_NbKCFKUt0FwiEErrWVGGQDkvWluOT7ao__29V_lCNtF-Aauxh609x_cSg=s0-d-e1-ft#http://images/c3.jpg" alt="girls in gym" class="m_img-fluid" style="margin-top:80px">
+    <section id="calorie-counter">
+        <div class="calorie-counter">
+          <label>Calorie Counter</label>
+          <p>What's in your food? Learn about calorie count, 
+    nutrition information and serving size.
+    <form method="POST">
+      {% csrf_token %}
+      <div id="search-input">
+      <input name="query" id="search-food" type="text" placeholder="Search foods">
+      <button class="btn whoop" type="submit" id="button-addon2">Find calories</button>
+      </div>
+    </form>
+        </div>
+      </section>
     
-            </figure>
-          </div>
+    <section id="features-two">
+      <h2><span>Balanced & Wholesome </span>Diet Plans made just for You. Enjoy the Good Life, One Balanced Bite at a Time</h2>
+      <p>We believe that a Healthy Meal should be accessible to everyone, everywhere, regardless of income or allergies. With hundreds of professional healthy Recipes, healthy meal plans, you’ll have everything you need to reach your personal fitness goals – for free! </p>
+      
+     <div id="features-two-box">
+        <div class="features-two-box">
+          <img src="{% static 'pic1.png' %}">
+        </div>
+  
+        <div class="features-two-box">
+          <img src="{% static 'pic2.png' %}">
+        </div>
+  
+        <div class="features-two-box">
+          <img src="{% static 'pic3.png' %}">
         </div>
       </div>
-    </div>
-    
-    <div class="m_container-fluid m_fh5co-network">
-      <div class="m_container">
-        <div class="m_row">
-          <div class="m_col-md-6">   
-            <h4 class="m_wow m_bounceInUp">Running</h4>
-            <h2 class="m_wow m_bounceInRight"></h2>
-            <hr>
-            <h5 class="m_wow m_bounceInLeft">Miles to Smiles: Every stride shreds calories</h5>
-            <p class="m_wow m_bounceInDown">Running is a fantastic calorie burner! It can incinerate between 280 and 520 calories in just 30 minutes, depending on your weight and intensity. While a general estimate suggests 100 calories per mile, remember this fluctuates based on factors like your body mass. The heavier you are, the more energy your body uses to move, resulting in greater calorie burn. So lace up your shoes, hit the ground, and torch some calories!”</p>
-          </div>
-          <div class="m_col-md-6">
-            <figure class="m_wow m_bounceInDown"> 
-              <img src="https://ci3.googleusercontent.com/meips/ADKq_Na4S6xh7BqTmyFOUp5HknTqhEkQUZYAiL4hdAlVnHRW26AkHtUJKS8CRA=s0-d-e1-ft#http://images/c2.jpg" alt="girls in gym" class="m_img-fluid">
-    
-    
-             </figure>
-          </div>
-        </div>
+      
+      
+      <div id="button">
+        <button><a href="/generate=meal-plan">More Plans</a></button>
       </div>
-    </div>
+    </section>
     
-    <footer class="m_container-fluid">
-      <div class="m_container">
-        <div class="m_row">
-          <div class="m_col-md-3 m_footer1 m_d-flex m_wow m_bounceInLeft">
-            <div class="m_d-flex m_flex-wrap m_align-content-center"> 
-              <p></p>
-              
+    <section id="features-three">
+        <div class="features-three-box">
+          <h2>The Tools for Your <span>Healthy Goals</span>
+  </h2>
+          <p>Trying to lose or Gain weight, tone up, get to a good BMI, or invest in your overall health?  We give you the right features to hit your goals.</p>
+          <button><a href="/generate-meal=plan">Get Started</a></button>
+        </div>
+  
+        <div class="features-three-box">
+          <img src="https://cdn.loveandlemons.com/wp-content/uploads/2019/02/meal-prep-ideas-1.jpg">
+        </div>
+  
+        <div class="features-three-box">
+          <img src="https://imgk.timesnownews.com/story/veg-thali.gif?tr=w-400,h-300,fo-auto">
+        </div>
+      
+        <div class="features-three-box">
+          <h2><span>Healthy</span> Meals & Recipes
+  </h2>
+          <p>Get nutritionist-approved recipes and motivational workout tips from Fitness experts.</p>
+          <button><a href="/generate-meal-plans">Explore Meals</a></button>
+        </div>
+      </section>
+      <section id="diet-info">
+        <h2>Diet Information</h2>
+        {% if api %}
+          {% if api == "oops! There was an error" %}
+            <div class="alert alert-warning">Oh no! something went wrong. Please try again in sometime.</div>
+          {% else %}
+            <div class="diet-info-card">
+              <h1>{{ api.0.name | capfirst }} has a total of <strong>{{ api.0.calories }} Calories</strong></h1>
+              {% if api.0.calories > 200 %}
+                <img src="{% static 'images/shocked.png' %}" class="img-responsive" />
+              {% endif %}
+              {% if api.0.sodium_mg > 1000 %}
+                <div class="alert alert-danger d-flex align-items-center mt-3" role="alert">
+                  <div>This food contains a high amount of sodium. High Sodium causes Sever dehydration and water retention.</div>
+                </div>
+              {% endif %}
+              {% if api.0.sugar_g > 100 %}
+                <div class="alert alert-danger d-flex align-items-center mt-3" role="alert">
+                  <div>This food contains a high amount of sugar. Sugar causes insulin spikes and is a no.1 cause for Obesity.</div>
+                </div>
+              {% endif %}
             </div>
-          </div>
-          <div class="m_col-md-6 m_footer2 m_wow m_bounceInUp" id="m_contact">
-            <h4>CALORIE COUNTER</h4>
-              <div class="m_calorie-counter-box">
-                  <form method="POST">
-                   {% csrf_token %}
-                  <input type="text" class="m_form-control m_pl-0">
-                  <button class="m_generate-btn m_px-6" type="submit">Generate</button>
-                  </form>
-              </div>
-              <div class="m_output"></div>
-              <hr>
-              <hr>
-              <hr>
-          </div>
-          <hr>
-          <hr>
-        </div>
-    </div></footer>
+          {% endif %}
+        {% endif %}
+      </section>
+  
+   
+    </main>
     
-    <div class="m_container-fluid m_fh5co-network">
-      <div class="m_container">
-        <div class="m_row">
-          <div class="m_col-md-6">   
-            <h4 class="m_wow m_bounceInUp">Swimming</h4>
-            <h2 class="m_wow m_bounceInRight"></h2>
-            <hr>
-            <h5 class="m_wow m_bounceInLeft">The lowest impact of all aerobic forms of exercise</h5>
-            <p class="m_wow m_bounceInDown">Take the plunge and torch calories! Swimming is a low-impact calorie crusher, burning between 223 and 878 calories per hour depending on your stroke and intensity. From a leisurely backstroke to a powerful butterfly, every pool session gets your heart pumping and muscles working. So, dive in and make a splash towards your fitness goals!</p>
-          </div>
-          <div class="m_col-md-6">
-            <figure class="m_wow m_bounceInDown">
-             
-              <img src="https://ci3.googleusercontent.com/meips/ADKq_NZ0YAFbk61OzW1ByK8R9jpfHlJhheDTnrjEEBzDtMSioYz4bE4h7dauLQ=s0-d-e1-ft#http://images/s1.jpg" alt="girls in gym" class="m_img-fluid" style="margin-top:80px">
-    
-    
-             </figure>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    
-    
-    
-    <div class="m_container-fluid m_fh5co-network">
-      <div class="m_container">
-        <div class="m_row">
-          <div class="m_col-md-6">   
-            <h4 class="m_wow m_bounceInUp">Yoga</h4>
-            <h2 class="m_wow m_bounceInRight"></h2>
-            <hr>
-            <h5 class="m_wow m_bounceInLeft">Unfold Your Power: Yoga burns &amp; builds</h5>
-            <p class="m_wow m_bounceInDown">Don&#39;t underestimate the power of yoga! This mind-body practice burns more than you might think. A one-hour yoga session can sizzle between 180 and 460 calories, depending on the style and your effort. From the flowing movements of Vinyasa to the restorative holds of Yin, yoga strengthens and tones while helping you torch calories. Unwind, refocus, and burn – all on your yoga mat!</p>
-          </div>
-          <div class="m_col-md-6">
-            <figure class="m_wow m_bounceInDown">
-             
-              <img src="https://ci3.googleusercontent.com/meips/ADKq_Nav1ckrD-OtCAaELSDIWdvP-NZOMafNj8Q-gfKsBb7Hsb5u6wcI55LPDS5n=s0-d-e1-ft#http://images/yoga.jpg" alt="Yoga" class="m_img-fluid">
-    
-    
-             </figure>
-          </div>
-        </div>
-      </div>
-    
-    </div>  
-    
-    
-     
-    
-    
-    
-    
-    
-    
-    
-    
-    </div>
-     </body></html>

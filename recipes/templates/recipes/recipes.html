@@ -13,7 +13,8 @@
     <style>
         body {
             font-family: 'Open Sans', sans-serif;
-            background-color: #f8f9fa;
+            background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(17,121,9,1) 35%, rgba(0,212,255,1) 100%);
         }
         .logo {
             max-width: 200px;
@@ -23,8 +24,9 @@
         }
         .whoop {
             border-radius: 25px;
-            background-color: #007bff;
-            border-color: #007bff;
+            background-color: black;
+            color: white;
+            border-color: black;
             color: #fff;
             font-weight: bold;
         }
@@ -33,12 +35,13 @@
             color: #333;
         }
         .recipe-card {
-            border: none;
+            border:#333;
             border-radius: 10px;
             padding: 20px;
             margin-bottom: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
             transition: box-shadow 0.3s;
+            background-color: beige;
         }
         .recipe-card:hover {
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -49,7 +52,8 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8 text-center">
-                <img src="{% static 'images/logo.png' %}" class="img-fluid logo mb-5 mt-5" />
+                <p style="color: #fff; font-size: 30px;">Get your recipes here!</p>
+
                 <form method="POST">
                     {% csrf_token %}
                     <div class="input-group input-group-lg mb-5">

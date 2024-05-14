@@ -1,0 +1,715 @@
+*{
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+  }
+  
+  a{
+    color: #000;
+  }
+  
+  label a{
+    color: #000;
+  }
+  #navbar{
+    position: fixed;
+    background-color: #fff;
+    width: 100%;  
+  }
+  
+  .logo{
+    font-size: 30px;
+    line-height: 60px;
+    font-weight: bold;
+    padding: 0px 80px;
+  }
+  
+  #navbar ul{
+    float: right;
+    margin-right: 80px;
+  }
+  
+  #navbar ul li{
+    display: inline-block;
+    line-height: 60px;
+    margin: 0px 10px;
+  }
+  
+  .nav-link{
+    color: black;
+    border-radius: 3px;
+    padding: 10px 15px;
+  }
+  
+  .active, .nav-link:hover{
+    background-color: #048444;
+    color: white;
+  }
+  
+  #header{
+    background-image: url(./front.png);
+    background-size: cover;
+    height: 100vh;
+  }
+  
+  #header h1{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 83px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 200px;
+  }
+  
+  #text{
+    font-weight: bold;
+    line-height: 23px;
+    color: #FFFFFF;
+    text-align: center;
+  }
+  
+  #button{
+    text-align: center;
+  }
+  
+  #button-one{
+    background: white;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 3px;
+    margin-top: 60px;
+  }
+  
+  #button-one a{
+    color: #048444;
+  }
+  
+  #features-one{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    margin-top: -180px ;
+    padding-top: 100px
+  }
+  
+  .features-one-box{
+    background: #fff;
+    border:1px solid #EDEDED;
+    padding: 40px 30px;
+    height: 250px;
+  }
+  
+  #features-one-link:hover{
+    border-bottom: 2px solid #048444;
+  }
+  .features-one-box h3{
+    color: #048444;
+    font-weight: bold;
+    line-height: 60px;
+  }
+  
+  #features-two h2{
+    width: 498px;
+    margin: 50px auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 47px;
+  }
+  
+  #features-two span{
+    color: #048444;
+  }
+  
+  #features-two p{
+    width: 736px;
+    margin: auto;
+    line-height: 23px;
+    text-align: center;
+  }
+  
+  #features-two-box{
+    display: flex;
+    width: 90%;
+    padding-top: 60px;
+    margin: auto;
+  }
+  
+  .features-two-box{
+    width: 352px;
+    height: 304px;
+    border-radius: 4px;
+    margin: 10px auto;
+  }
+  
+  #features-two button{
+    background: #048444;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 3px;
+    margin-top: 60px;
+  }
+  
+  #features-two a{
+    color: #FFF
+  }
+  
+  #features-three{
+    display: grid;
+    grid-template-columns: 600px 600px;
+    grid-template-rows: 440px 440px;
+    margin-top: 100px;
+    justify-content: center;
+  }
+  
+  .features-three-box{
+    background: #FAFAFA;
+  }
+  
+  .features-three-box img{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .features-three-box span{
+    color: #048444;
+  }
+  
+  .features-three-box h2{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 47px;
+    padding: 100px 50px 20px 50px;
+  }
+  
+  .features-three-box p{
+    line-height: 23px;
+    padding: 0px 50px;
+  }
+  
+  .features-three-box button{
+    line-height: 23px;
+    margin: 20px 50px;
+    padding: 10px;
+    font-size: 18px;
+    background: #048444;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  .features-three-box a{
+    color: white;
+  }
+  
+  #calorie-counter{
+    background-image: url(./caloriepic.png);
+    height: 700px;
+    margin-top: -200px;
+    width: 100%;
+  }
+  
+  .calorie-counter{
+    padding: 300px 150px;
+  }
+  
+  #calorie-counter label{
+    color: #FFF;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 90px;
+  }
+  
+  #calorie-counter p{
+    color: #FFF;
+    width: 405px;
+  }
+  
+  #search-food{
+    width: 100%;
+    padding: 15px 15px;
+    border-radius: 3px;
+    border: none;
+  }
+  
+  #search-input{
+    margin-top: 40px;
+  }
+  
+  footer{
+    background-color: #fff;
+  }
+  
+  #footer-section{
+    display: flex;
+    padding: 20px;
+  }
+  
+  .footer-section{
+    margin: 40px;
+    width: 20%;
+  }
+  
+  .footer-section label{
+    font-weight: bold;
+    line-height: 80px;
+  }
+  
+  .footer-section ul{  
+    line-height: 40px;
+  }
+  
+  .footer-link{
+    color: #000;
+  }
+  
+  .footer-sec{
+    width: 50%;
+    margin: 55px 50px 50px 0px;
+  }
+  
+  .footer-sec label{
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 50px;
+  }
+  
+  #footer-form{
+    margin-top: 20px;
+  }
+  
+  #footer-form input{
+    width: 300px;
+    padding: 10px;
+    border-radius: 3px;
+    border-style: none;
+    border: 1px solid black;
+  }
+  
+  #footer-form button{
+    background: #048444;
+    color: #fff;
+    width: 100px;
+    padding: 10px;
+    border-radius: 3px;
+    border-style: none;
+    border: 1px solid black;
+  }
+  
+  hr{
+    margin: 30px 50px;
+  }
+  
+  .bottom{
+    display: inline-block;
+    padding: 0px 50px 20px 50px;
+    width: 100%;
+  }
+  
+  #copyright{
+    display: inline-block;
+  }
+  
+  #bottom-footer-link{
+    float: right;
+  }
+  
+  .bottom span{
+    color: #048444;
+    font-weight: bold;
+  }
+  
+  .bottom li{
+    display: inline-block;
+    text-decoration: underline;
+    margin-left: 30px;
+  }
+  
+  
+  #diet-info {
+    margin-top: 20px;
+  }
+  
+  .diet-info-card {
+    background-color: #F7F7F7;  
+    border: 2px solid #000000; 
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .diet-info-card h1 {
+    color: #009900; 
+  }
+  
+  .diet-info-card img {
+    max-width: 100px;
+    margin-top: 10px;
+  }
+  
+  .alert {
+    margin-top: 10px;
+  }
+  
+  .alert-danger {
+    background-color: #FFCCCC; 
+    color: #FF0000; 
+    border: 1px solid #FF0000; 
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  
+  @media screen and (max-width: 600px) {
+    .diet-info-card {
+      padding: 10px;
+    }
+  }
+  
+  
+  
+  @media (max-width: 872px){
+     body{
+      font-size: 16px;
+    }
+  
+    #header h1{
+      font-size: 57px;
+      line-height: 70px;
+      color: #FFFFFF;
+      padding-top: 150px;
+    }
+  
+    #text{
+      line-height: 23px;
+    }
+  
+    #button-one{
+      font-size: 16px;
+      margin-top: 40px;
+    }
+  
+    #features-one{
+      padding-top: 120px;
+      flex-wrap: wrap;
+      width: 800px;
+      
+    }
+  
+    .features-one-box{
+      padding: 30px 30px;
+      height: 200px;
+      width: 800px;
+    }
+  
+    #features-two h2{
+      width: 100%;
+      margin: 30px auto;
+      padding: 10px 40px;
+      font-size: 30px;
+    }
+  
+    #features-two p{
+      margin: auto;
+      padding: 0px 5px;
+    }
+    
+    #features-two-box{
+      flex-wrap: wrap;
+      width: 100%
+    }
+  
+    #features-three{
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 300px 300px 300px 300px;
+      padding: 10px;
+    }
+    
+    .features-three-box h2{
+      font-size: 28px;
+      line-height: 32px;
+      padding: 60px 30px 20px 30px;
+    }
+    
+    .features-three-box p{
+      line-height: 20px;
+      padding: 0px 30px;
+    }
+    
+    .features-three-box button{
+      margin: 20px 30px;
+      font-size: 16px;
+    }
+    
+    #calorie-counter{
+      margin-top: -750px;
+      height: 550px
+    }
+    
+    .calorie-counter{
+      padding: 250px 100px;
+    }
+  
+    #calorie-counter label{
+      font-size: 26px;
+      line-height: 50px;
+    }
+  
+    #calorie-counter p{
+      width: 400px;
+    }
+  
+    #search-food{
+      padding: 15px 15px;
+    }
+  
+    #search-input{
+      margin-top: 30px;
+    }
+    
+    #footer-section{
+      flex-wrap: wrap;
+    }
+    
+    .footer-section{
+      margin: 20px auto;
+      width: 50%;
+      text-align: center; 
+    }
+    
+    .footer-section label{
+      line-height: 50px;
+    }
+  
+    .footer-section ul{  
+      line-height: 30px;
+    }
+    
+    .footer-sec{
+      width: 70%;
+      margin: 30px auto;
+    }
+    
+    .footer-sec label{
+      font-size: 25px;
+      line-height: 30px;
+    }
+  
+    #footer-form{
+      margin-top: 20px;
+    }
+  
+    #footer-form input{
+      width: 100%;
+    }
+  
+    #footer-form button{
+      width: 100px;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    
+    hr{
+      margin: 20px 40px;
+    }
+  
+    .bottom{
+      display: block;
+      margin-bottom: 50px;
+    }
+  
+    #copyright{
+      display: block;
+      text-align: center;
+    }
+  
+    #bottom-footer-link{
+      float: none;
+      text-align: center;
+    }
+  
+    .bottom li{
+      margin-left: 0px;
+      margin-top: 10px;
+    }
+  
+  }
+  
+  
+  
+  
+  
+  @media (max-width: 600px){
+  
+    body{
+      font-size: 16px;
+    }
+  
+    #header h1{
+      font-size: 57px;
+      line-height: 73px;
+      color: #FFFFFF;
+      padding-top: 150px;
+    }
+  
+    #text{
+      line-height: 23px;
+    }
+  
+    #button-one{
+      font-size: 16px;
+      margin-top: 40px;
+    }
+  
+    #features-one{
+      padding-top: 80px;
+      flex-wrap: wrap;
+    }
+  
+    .features-one-box{
+      padding: 30px 30px;
+      height: 200px;
+    }
+  
+    #features-two h2{
+      width: 100%;
+      margin: 50px auto;
+      padding: 10px 40px;
+      font-size: 26px;
+    }
+  
+    #features-two p{
+      width: 336px;
+      margin: auto;
+      padding: 0px 5px;
+    }
+    
+    #features-two-box{
+      flex-wrap: wrap;
+      width: 100%
+    }
+  
+    #features-three{
+      grid-template-columns: 100%;
+      grid-template-rows: 300px 300px 300px 300px;
+      padding: 10px;
+    }
+    
+    .features-three-box h2{
+      font-size: 28px;
+      line-height: 32px;
+      padding: 40px 30px 10px 30px;
+    }
+    
+    .features-three-box p{
+      line-height: 20px;
+      padding: 0px 30px;
+    }
+    
+    .features-three-box button{
+      margin: 20px 30px;
+      font-size: 16px;
+    }
+    
+    #calorie-counter{
+      height: 500px;
+    }
+    
+    .calorie-counter{
+      padding: 250px 55px;
+    }
+  
+    #calorie-counter label{
+      font-size: 26px;
+      line-height: 50px;
+    }
+  
+    #calorie-counter p{
+      width: 250px;
+    }
+  
+    #search-food{
+      padding: 10px 10px;
+    }
+  
+    #search-input{
+      margin-top: 30px;
+    }
+    
+    #footer-section{
+      flex-wrap: wrap;
+    }
+    
+    .footer-section{
+      margin: 20px auto;
+      width: 100%;
+      text-align: center
+      
+    }
+    
+    .footer-section label{
+      line-height: 50px;
+    }
+  
+    .footer-section ul{  
+      line-height: 30px;
+    }
+    
+    .footer-sec{
+      width: 100%;
+      margin: 10px 20px;
+    }
+    
+    .footer-sec label{
+      font-size: 25px;
+      line-height: 30px;
+    }
+  
+    #footer-form{
+      margin-top: 20px;
+    }
+  
+    #footer-form input{
+      width: 100%;
+    }
+  
+    #footer-form button{
+      width: 100px;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    
+    hr{
+      margin: 10px 40px;
+    }
+  
+    .bottom{
+      display: block;
+      margin-bottom: 50px;
+    }
+  
+    #copyright{
+      display: block;
+      text-align: center;
+    }
+  
+    #bottom-footer-link{
+      float: none;
+      text-align: center;
+    }
+  
+    .bottom li{
+      margin-left: 0px;
+      margin-top: 10px;
+    }
+  
+  }

@@ -17,9 +17,9 @@ def calorie_counter(request):
         except Exception as e:
             api = "oops! There was an error"
             print(e)
-        return render(request, 'calories/calorie_counter_new1.html', {'api': api})
+        return render(request, 'calories/calorie_counter.html', {'api': api})
     else:
-        return render(request, 'calories/calorie_counter_new1.html', {'query': 'Enter a valid query'})
+        return render(request, 'calories/calorie_counter.html', {'query': 'Enter a valid query'})
         
 # def calorie_counter(request):
 #     return render(request, 'calories/calorie_counter_new.html')
