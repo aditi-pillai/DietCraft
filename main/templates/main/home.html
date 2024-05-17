@@ -17,13 +17,17 @@
 
 <body>
     <header>
-        <div class="logo">DIETCRAFT</div>
+        <a href="/home" class="logo">
+            <img src="{% static 'logo1.png' %}" alt="DietCraft Logo">
+        </a>    
         <div class="nav-bar">
             <ul>
                 <li><a href="/home">Home</a></li>
                 <li><a href="/dashboard">About</a></li>
                 <li><a href="/generate-meal-plan">Generate your Food Plan</a></li>
                 <li><a href="/calories">Calorie Count</a></li>
+                <li><a href="/signup">Sign Up</a></li>
+                <li><a href="/signin">Login</a></li>
                 {% comment %} <li><a href="#">Contact</a></li> {% endcomment %}
             </ul>
         </div>
@@ -44,7 +48,9 @@
             <h4>Eat healthy, live happy. Starts with planning</h4>
             <h1>Discover a world of flavors, planned just for you.</h1>
             <h3>Healthy eating made simple.</h3>
-            <div class="button">Generate Your Personalized Meal Plan</div>
+            <div class="button">
+                <a href="/generate-meal-plan">Generate Your Personalized Meal Plan</a>
+            </div>
         </div>
     </div>
     <!----About Section Start---------------------------------->

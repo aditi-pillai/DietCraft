@@ -51,7 +51,7 @@
             {% csrf_token %}
             <div class="search-container">
               <input id="search-food" name="query" type="text" placeholder="Search receipe">
-              <button class="btn whoop" type="submit" id="button-addon2">Find recipe</button>
+              {% comment %} <button class="btn whoop" type="submit" id="button-addon2">Find recipe</button> {% endcomment %}
               <button id="search-btn">Search</button>
             </div>
         </form>
