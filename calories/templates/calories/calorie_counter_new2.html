@@ -7,21 +7,20 @@
   <title>DietCraft</title>
   <link rel="stylesheet" type="text/css" href="{% static 'styles_result.css' %}">
 </head>
+<header></header>
 <body>
-  <nav id="navbar">
-    {% comment %} <a href="/home" class="logo">
-        <img src="{% static 'logo1.png' %}" alt="DietCraft Logo">
-    </a> {% endcomment %}
     <label class="logo"><a href="/home">DIETCRAFT</a></label>
-    <ul>
-      <li><a class="nav-link" href="/recipes" >Recipes</a></li>
-      <li><a class="nav-link" href="/generate-meal-plan">Meals</a></li>
-      <li><a class="nav-link" href="/dashboard">Dashboard</a></li>
-      {% comment %} <li><a class="nav-link" href="#">Shop</a></li> {% endcomment %}
-      {% comment %} <li><a class="nav-link" href="/signup">Sign Up</a></li>
-      <li><a class="nav-link" href="/signin">Log In</a></li> {% endcomment %}
-    </ul>
-  </nav>
+        <div class="nav-bar">
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/dashboard">About</a></li>
+                <li><a href="/generate-meal-plan">Generate your Meal Plan</a></li>
+                <li><a href="/calories">Calorie Count</a></li>
+                <li><a href="/recipes">Recipe Search</a></li>
+                <li><a href="/signin">Login</a></li>
+                <li><a href="/signup">Sign Up</a></li>
+            </ul>
+        </div>
   
   <main>
     <section id="header" style="background-image: url('../../../static/front.png');">

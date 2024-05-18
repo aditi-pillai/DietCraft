@@ -81,7 +81,9 @@ def signup(request):
             myuser.is_active = True
             myuser.save()
 
-            messages.success(request, "Your account has been successfully created")
+            messages.success(request, "Your account has been successfully created. Login to continue")
+
+            return render(request, "main/home.html", {})
 
             '''
             # Welcome Email
